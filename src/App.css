@@ -5,38 +5,108 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.app {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 500px;
+  margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app h1 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* TemperatureDisplay */
+.temperature-display {
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-.card {
-  padding: 2em;
+.temperature-display.cold {
+  background-color: #e3f2fd;
+  color: #1565c0;
 }
 
-.read-the-docs {
-  color: #888;
+.temperature-display.pleasant {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.temperature-display.hot {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+.temperature-value {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0 0 0.25rem 0;
+}
+
+.temperature-message {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+/* TemperatureControls */
+.temperature-controls {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.temperature-controls button {
+  padding: 0.6rem 1.2rem;
+  font-size: 1.25rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #f5f5f5;
+  cursor: pointer;
+  min-width: 3rem;
+}
+
+.temperature-controls button:hover {
+  background: #eee;
+}
+
+.temperature-controls button:active {
+  background: #e0e0e0;
+}
+
+/* HistoryList */
+.history-list {
+  text-align: left;
+  padding: 1rem;
+  background: #fafafa;
+  border-radius: 8px;
+}
+
+.history-list h3 {
+  margin: 0 0 0.75rem 0;
+  font-size: 1rem;
+}
+
+.history-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.history-list li {
+  padding: 0.35rem 0;
+  font-family: monospace;
+  font-size: 0.9rem;
+}
+
+.history-empty {
+  margin: 0;
+  color: #666;
+  font-size: 0.9rem;
 }
